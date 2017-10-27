@@ -4,6 +4,14 @@ import logo from './ga.png';
 import Account from './Account';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.state={
+      balance: 0
+    }
+  }
+
   render() {
     return (
       <div id="content">
@@ -11,8 +19,8 @@ class App extends Component {
           <div id="logo"><img src={logo} alt="General Assembly logo" /></div>
           <div id="title">Bank of GA</div>
         </div>
-        <Account />
-        <Account />
+        <Account name="Checking" />
+        <Account name="Savings" />
         <div className="clear"></div>
       </div>
     );
